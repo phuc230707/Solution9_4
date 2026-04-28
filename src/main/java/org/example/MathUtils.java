@@ -24,7 +24,7 @@ public class MathUtils {
   public File createMyFile() throws IOException {
     // LỖI: Dấu '\' chỉ chạy trên Windows. Linux sẽ coi đây là một phần của tên file.
     // LỖI: Linux không có ổ đĩa 'C:', nó bắt đầu bằng '/' (root).
-    String path = "C:\\uet_test_file.txt";
+    String path = "/uet_test_file.txt";
 
     File file = new File(path);
       if (file.createNewFile()) {
