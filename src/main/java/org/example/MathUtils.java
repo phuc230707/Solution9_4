@@ -21,19 +21,17 @@ public class MathUtils {
     return a + b;
   }
 
-  public void createMyFile()  {
+  public File createMyFile() throws IOException {
     // LỖI: Dấu '\' chỉ chạy trên Windows. Linux sẽ coi đây là một phần của tên file.
     // LỖI: Linux không có ổ đĩa 'C:', nó bắt đầu bằng '/' (root).
-    String path = "C:\\data\\projects\\output.txt";
+    String path = "C:\\uet_test_file.txt";
 
     File file = new File(path);
-    try {
       if (file.createNewFile()) {
         System.out.println("File created!");
       }
-    } catch (IOException e) {
-      System.out.println("File doesn't exist");
-    }
+
+    return file;
   }
   /**
    * Thực hiện phép chia hai số thực.

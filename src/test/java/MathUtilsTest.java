@@ -2,8 +2,9 @@ import org.example.MathUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import java.io.IOException;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MathUtilsTest {
   private MathUtils mathUtils;
@@ -26,7 +27,7 @@ public class MathUtilsTest {
     });
   }
   @Test
-  void testduongdanfile(){
-    mathUtils.createMyFile();
+  void testFilePath() throws IOException {
+    assertTrue(mathUtils.createMyFile().exists());
   }
 }
